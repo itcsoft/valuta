@@ -1,0 +1,35 @@
+
+<h1>Курс валют:</h1>
+<div>
+    <span style="color: red; font-weight:bold;">
+        Доллар: {{ USD }}
+    </span><br>
+    <span style="color: blue; font-weight:bold;">
+        Евро: {{ EUR }}
+    </span><br>
+    <span style="color: green; font-weight:bold;">
+        Тенге: {{ KZT }}
+    </span><br>
+    <span style="color: purple; font-weight:bold;">
+        Рубль: {{ RUB }}
+    </span>
+</div>
+
+<br>
+Сом бериниз мен аны долларга айлантам курс боюнча: <br>
+
+<form method="POST" action="/convert-usd/">
+    <input 
+        type="number" 
+        placeholder="Сумма:" 
+        value="0"
+        name="input_value"
+    >
+    <button>конвертация</button>
+    
+</form>
+
+<p>
+    Сиз акчаныз доллар форматында:
+    {{ converted_usd_result }}
+</p>
